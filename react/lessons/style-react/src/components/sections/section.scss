@@ -1,0 +1,38 @@
+// div{
+//     h1{
+//         span + span {
+
+//         }
+//     }
+// }
+
+div {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+
+    >h1 {
+        font-size: 5rem;
+
+        span {
+            color: red;
+
+            &+span {
+
+                color: blue;
+
+                &:hover {
+                    color: black;
+                }
+
+                &::before{
+                    content: "this is before";
+                }
+
+                &::after{
+                    content: "this is after";
+                }
+            }
+        }
+    }
+}
