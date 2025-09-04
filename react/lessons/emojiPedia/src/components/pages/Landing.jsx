@@ -9,15 +9,16 @@ const Landing = () => {
 
     let [emojisData, setEmojisData] = useState(emojis)
 
-    function addEmoji() {
+    function addEmoji(emoji) {
         setEmojisData((prev) => {
-            return [...prev, { icon: "🛟", name: "Ring Buoy", description: "A round white and orange or red ring buoy with string laced through its perimeter. Also called a life preserver." }]
+            return [emoji, ...prev]
         })
     }
 
     return (
         <div id='landing-page'>
-            {/* <AddEmoji /> */}
+            <span className='block text-center font-bold text-4xl py-10'>EmojiPedia</span>
+            <AddEmoji addEmojiAction={addEmoji}/>
             <DisplayEmoji dataToBeDisplayed={emojisData} />
         </div>
     )
