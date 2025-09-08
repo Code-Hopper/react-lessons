@@ -11,6 +11,7 @@ const DisplayEmoji = (props) => {
                 <div className='description-container'>
                     <span className='emoji-name'>{emoji.name}</span>
                     <p className='emoji-description'>{emoji.description}</p>
+                    <button onClick={() => { props.deleteAction(index) }} className='font-bold bg-red-600 px-2 py-1 text-white'>Delete</button>
                 </div>
             </div>
         )
