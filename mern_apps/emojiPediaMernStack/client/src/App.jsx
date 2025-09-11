@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 
@@ -6,11 +6,15 @@ const App = () => {
 
   let [message, setMessage] = useState("")
 
+  useEffect(() => {
+    getBackendMessage()
+  }, [])
+
   async function getBackendMessage() {
     try {
       let result = await axios({
         method: "Get",
-        url: `http://localhost:4000/api/om`,
+        url: `http://localhost:4000/api/get-all-emojies`,
       })
 
       if (result.status != 200) { throw ("request failed !") }
