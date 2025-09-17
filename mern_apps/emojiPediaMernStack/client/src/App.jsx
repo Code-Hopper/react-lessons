@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 
+import Component1 from './Components/Component1.jsx'
+
 const App = () => {
 
   let [message, setMessage] = useState("")
@@ -38,6 +40,8 @@ const App = () => {
       {
         message && <h1>{message}</h1>
       }
+
+      <Component1 />
 
     </div>
   )
