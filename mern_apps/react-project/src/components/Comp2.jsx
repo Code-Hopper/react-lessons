@@ -10,6 +10,6 @@ const Comp2 = () => {
             <h2>{data}</h2>
         </div>
     )
-}
+}   
 
 export default Comp2
