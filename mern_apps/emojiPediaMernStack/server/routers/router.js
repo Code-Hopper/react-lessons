@@ -1,6 +1,6 @@
 import express from "express"
 import { emojiModel } from "../models/emojiModel.js"
-import { getEmojiesData } from "../controllers/controller.js"
+import { getEmojiesData, deleteEmoji } from "../controllers/controller.js"
 let router = express.Router()
 
 router.get("/test", (req, res) => {
@@ -9,5 +9,7 @@ router.get("/test", (req, res) => {
 })
 
 router.get("/get-all-emojies", getEmojiesData)
+
+router.delete("/delete-emoji/:id", deleteEmoji)
 
 export { router }

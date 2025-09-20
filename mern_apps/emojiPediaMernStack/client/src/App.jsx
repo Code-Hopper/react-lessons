@@ -1,11 +1,14 @@
 import React from 'react'
 import { EmojiProvider } from './Context/EmojiContext'
-import Component1 from './Components/Component1'
+import DisplayEmoji from './Components/DisplayEmojis'
+
+import "./Components/style.scss"
+
 const App = () => {
   return (
     <>
       <EmojiProvider>
-        <Component1 />
+        <DisplayEmoji />
       </EmojiProvider>
     </>
   )

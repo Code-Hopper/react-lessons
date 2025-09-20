@@ -1,0 +1,42 @@
+#emoji-grid {
+    padding: 5rem 10rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+
+    .emoji-card {
+        background-color: rgba(240, 240, 240, 1);
+        border: 1px solid rgba(230, 230, 230, 1);
+        border-radius: 14px;
+        height: 200px;
+
+        display: grid;
+        grid-template-columns: 30% auto;
+        align-items: center;
+
+        .icon-container {
+            padding: 1rem;
+
+            span.emoji-icon {
+                font-size: 4rem;
+            }
+        }
+
+        .description-container {
+            padding: 1rem;
+
+            span.emoji-name {
+                font-weight: bolder;
+                font-size: 1.2rem;
+            }
+
+            p {
+                color: rgba(0, 0, 0, .5);
+            }
+        }
+
+    }
+
+}

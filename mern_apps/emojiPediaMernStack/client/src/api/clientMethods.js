@@ -14,4 +14,19 @@ async function fetchEmojiData() {
     }
 }
 
-export { fetchEmojiData }
+async function deleteEmoji(id) {
+    try {
+
+        let result = await axios({
+            method: "Delete",
+            url: `${baseUrl}/delete-emoji/${id}`
+        })
+
+        return result.data
+
+    } catch (err) {
+        throw err
+    }
+}
+
+export { fetchEmojiData, deleteEmoji }

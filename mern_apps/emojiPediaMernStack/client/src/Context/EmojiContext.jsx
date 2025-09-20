@@ -1,16 +1,16 @@
 import React, { useEffect, useState, createContext } from "react"
-import { fetchEmojiData } from "../api/clientMethods"
+import { fetchEmojiData, deleteEmoji } from "../api/clientMethods"
 import { useContext } from "react"
 let EmojiContext = createContext()
 
 let EmojiProvider = ({ children }) => {
 
-    let [emoji, setEmoji] = useState([])
+    let [emojies, setEmojies] = useState(null)
 
     async function getInitialData() {
         try {
             let response = await fetchEmojiData()
-            setEmoji(response.data)
+            setEmojies(response.data)
             console.log('got called !')
         } catch (err) {
             console.log("error while getting initial data : ", err)
@@ -21,8 +21,20 @@ let EmojiProvider = ({ children }) => {
         getInitialData()
     }, [])
 
+
+    async function excuteDelete(id) {
+        try {
+            let response = await deleteEmoji(id)
+            console.log(response)
+            await getInitialData()
+        } catch (err) {
+            console.log("unable to delete emoji")
+            console.log(err)
+        }
+    }
+
     return (
-        <EmojiContext.Provider value={{ emoji }}>
+        <EmojiContext.Provider value={{ emojies, excuteDelete }}>
             {children}
         </EmojiContext.Provider>
     )
