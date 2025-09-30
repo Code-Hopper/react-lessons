@@ -8,6 +8,12 @@
         background-color: red;
         color: white;
     }
+
+    &.info {
+        background-color: blue;
+        color: white;
+    }
+
     min-width: 300px;
     position: fixed;
     left: 50%;
@@ -15,4 +21,6 @@
     transform: translateX(-50%);
     padding: 1rem;
     border-radius: 14px;
+    z-index: 9999;
+    transition: all 0.5s ease;
 }

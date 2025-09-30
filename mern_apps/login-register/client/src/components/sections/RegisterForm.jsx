@@ -14,6 +14,8 @@ export const RegisterForm = () => {
         name: "", phone: "", email: "", age: "", password: ""
     })
 
+    let [loading, setLoading] = useState(false)
+
     let [togglePassword, setTogglePassword] = useState(false)
 
     const handleRegisterFormChange = (e) => {
@@ -26,12 +28,24 @@ export const RegisterForm = () => {
     const handleRegisterFormSubmit = async (e) => {
         e.preventDefault()
         try {
+            setLoading(true)
+            if (!registerForm.name || !registerForm.phone || !registerForm.email || !registerForm.age || !registerForm.password) throw ("please fill out the registeration form !")
             let response = await registerUser(registerForm)
-            showAlert("success", response.message)
-            console.log(response)
+            showAlert(`success`, response.message)
+            clearForm()
         } catch (err) {
+            setLoading(false)
             console.log("unable to register : ", err)
+            showAlert("error", err.response ? err.response.data.message : err)
+        } finally {
+            setLoading(false)
         }
+    }
+
+    const clearForm = () => {
+        setRegisterForm({
+            name: "", phone: "", email: "", age: "", password: ""
+        })
     }
 
     return (
@@ -45,7 +59,7 @@ export const RegisterForm = () => {
                     <input onChange={handleRegisterFormChange} value={registerForm.age} type="number" name='age' placeholder='Enter Your Age' />
                     <div className='flex gap-2'>
                         <input className='grow' onChange={handleRegisterFormChange} value={registerForm.password} type={togglePassword ? "text" : "password"} name='password' placeholder='Create a password !' />
-                        <button onClick={() => { setTogglePassword(!togglePassword) }}>
+                        <button type='button' onClick={() => { setTogglePassword(!togglePassword) }}>
                             {togglePassword ? <FaEyeSlash /> : <FaEye />}
                         </button>
                     </div>
@@ -58,8 +72,10 @@ export const RegisterForm = () => {
                         )
                     }
 
-                    <button type='submit' className='font-bold hover:!bg-green-700 transition hover:!text-white'>
-                        Register
+                    <button type='submit' className='font-bold hover:!bg-green-700 transition hover:!text-white' disabled={loading}>
+                        {
+                            loading ? "Loading...." : "Register"
+                        }
                     </button>
                 </form>
             </div>
