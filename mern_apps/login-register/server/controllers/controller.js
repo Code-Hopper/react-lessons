@@ -75,4 +75,19 @@ const postUserLogin = async (req, res) => {
     }
 }
 
-export { postUserRegister, postUserLogin }
+const getUserInfo = (req, res) => {
+    try {
+
+        let { user } = req
+
+        if (!user) throw ("unable to get user profile !")
+
+        res.status(200).json({ message: "your request was successfull !", user })
+
+    } catch (err) {
+        console.log("error while sending user profile")
+        res.status(500).json({ message: "unable to send user profile :", err })
+    }
+}
+
+export { postUserRegister, postUserLogin, getUserInfo }
