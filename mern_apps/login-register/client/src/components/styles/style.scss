@@ -46,3 +46,15 @@
     }
 
 }
+
+#login-form-container {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+
+    .login-form {
+        width: 500px;
+        height: 500px;
+        background-color: white;
+    }
+}

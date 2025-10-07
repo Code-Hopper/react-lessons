@@ -40,8 +40,6 @@ const postUserLogin = async (req, res) => {
             throw ("email/password not found !")
         }
 
-        "ameykhondekar01@gmail.com"
-
         let userExists = await userModel.findOne({ "email": email })
 
         if (!userExists) {
@@ -65,9 +63,9 @@ const postUserLogin = async (req, res) => {
 
         console.log(process.env.JWT_SECRET)
 
-        let token = jwt.sign({ email: userExists.email }, process.env.JWT_SECRET, { expiresIn: "12hr" })
+        let token = await jwt.sign({ email: userExists.email }, process.env.JWT_SECRET, { expiresIn: "12hr" })
 
-        res.status(201).json({ message: `user with email ${userExists.email} loged in successfully !`, token })
+        res.status(201).json({ message: `user with email ${userExists.email} loged in successfully !`, token, user: userExists })
 
     } catch (err) {
         console.log("unable to login user !", err)
