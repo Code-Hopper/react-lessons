@@ -90,3 +90,114 @@
 // ? (ternary conditional statement)
 // 7. Member Access Operators
 // .dot
+
+// let data = 10
+
+// // console.log(data++)
+
+// let data2 = data++
+
+// console.log(data2)
+
+// console.log(data)
+
+// let data = 10
+
+// data += 10 // data = data + 10 // 20
+// data -= 10 // data = data - 10 // 0
+// data /= 10 // data = data / 10 // 1
+// data *= 10 // data = data * 10 // 100
+// data %= 10 // data = data % 10 // 0
+
+// console.log("hello" + " world " + "!" + data)
+
+// string + anything = string
+
+// "10" + 10 = 1010
+// 10 + 10 = 20
+// "a" + 10 = a10
+
+// console.log(10+"10")
+
+// template litral
+// `` - back tick
+
+// console.log(`hello world ! ${10+10}`)
+
+// let name = "amey khondekar"
+// let age = 23
+// let city = "nagpur"
+
+// console.log(`hello ! my name is ${name} i'm from ${city} city, my age is ${age} years.`)
+
+// type casting
+
+// STRING --> NUMBER
+
+// let data = "123" 
+
+// // casting to number will create NaN(Not a Number) when string values if only alphabets/alphanumeric
+
+// console.log(`before type casting ${typeof(data)} : ${data}`)
+
+// data = Number(data)
+
+// console.log(`after type casting ${typeof(data)} : ${data}`)
+
+// STRING --> BOOLEAN
+
+// let data = "" 
+
+// // if empty string then casting will create false
+
+// console.log(`before type casting ${typeof(data)} : ${data}`)
+
+// data = Boolean(data)
+
+// console.log(`after type casting ${typeof(data)} : ${data}`)
+
+// NUMBER --> STRING
+
+// let data = 123 
+
+// console.log(`before type casting ${typeof(data)} : ${data}`)
+
+// // data = String(data)
+// data = data.toString()
+
+// console.log(`after type casting ${typeof(data)} : ${data}`)
+
+// NUMBER --> BOOLEAN
+
+// let data = 0 
+
+// // if 0 then false, else true
+
+// console.log(`before type casting ${typeof(data)} : ${data}`)
+
+// data = Boolean(data)
+
+// console.log(`after type casting ${typeof(data)} : ${data}`)
+
+// BOOLEAN --> STRING
+
+// let data = true
+
+// console.log(`before type casting ${typeof(data)} : ${data}`)
+
+// // data = String(data)
+// data = data.toString()
+
+// console.log(`after type casting ${typeof(data)} : ${data}`)
+
+// BOOLEAN --> NUMBER
+
+// let data = false
+
+// // if false then 0, else 1
+
+// console.log(`before type casting ${typeof(data)} : ${data}`)
+
+// data = Number(data)
+
+// console.log(`after type casting ${typeof(data)} : ${data}`)
