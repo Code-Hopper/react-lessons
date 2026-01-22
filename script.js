@@ -201,3 +201,96 @@
 // data = Number(data)
 
 // console.log(`after type casting ${typeof(data)} : ${data}`)
+
+// let input = window.confirm("are you sure ?") // boolean
+
+// console.log(`value of input is ${input} and type is ${typeof(input)}`)
+
+// let input = window.prompt("enter your name !")  // type will always be a string
+
+// console.log(`value of input is ${input} and type is ${typeof(input)}`)
+
+// take 2 numbers as input and print their sum.
+
+// conditional statements
+
+// 1. if, 2. if else, 3. if elseif, 4. ternary statement
+
+// if statement
+
+// if (condition) {
+//     // if true then this body
+// }
+
+// let a = 10
+// let b = 200
+// let c = 50
+// b > a true
+// if (b > a) {
+//     console.log("b is greater than a !")
+// }
+
+// if(condition){
+//     // true block
+// }else{
+//     // false block
+// }
+
+// if(b > a) {
+//     console.log("b is greater than a !")
+// }else{
+//     console.log("a is greater than b !")
+// }
+
+// a > b -> a > c = a is greater
+// b > a -> b > c = b is greater
+// c > a -> c > b = c is greaters 
+
+// nasted if, if-elseif
+
+// a 40 , b 40 , c 40
+
+// if (a > b) {
+//     if (a > c) {
+//         console.log("a is greater than b & c !")
+//     } else {
+//         console.log("c is greater than a & b !") // 1
+//     }
+// } else if (b > c) {
+//     console.log("b is greater than a & c !")
+// } else {
+//     console.log("c is greater than a & b !") // 2
+// }
+
+// ternary statements
+
+// condition ? true : false
+
+// let a = 20
+// let b = 20
+
+// a > b ? console.log("a is greater !") : console.log("b is greater !")
+
+// leap year
+// a leap occurs once in every 4 year and not in every 100 years and then in every 400 years
+
+// 2024 -> 2026 -> 2028
+// 2000 - 2100 x - 2200 x - 2300 x - 2400 x
+
+let year = 2026
+
+if (year % 100 == 0) {
+    if (year % 400 == 0) {
+        console.log(`${year} year is a leap year !`)
+    } else {
+        console.log(`${year} year is not a leap year !`)
+    }
+} else if (year % 4 == 0) {
+    console.log(`${year} year is a leap year !`)
+} else {
+    console.log(`${year} year is not a leap year !`)
+}
+
+// looping statements
+
+// 1. while. 2. do while, 3. for, 4. for each, 5. for of, 6. for in 
