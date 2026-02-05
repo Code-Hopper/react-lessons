@@ -277,20 +277,509 @@
 // 2024 -> 2026 -> 2028
 // 2000 - 2100 x - 2200 x - 2300 x - 2400 x
 
-let year = 2026
 
-if (year % 100 == 0) {
-    if (year % 400 == 0) {
-        console.log(`${year} year is a leap year !`)
-    } else {
-        console.log(`${year} year is not a leap year !`)
-    }
-} else if (year % 4 == 0) {
-    console.log(`${year} year is a leap year !`)
-} else {
-    console.log(`${year} year is not a leap year !`)
-}
+// if (year % 100 == 0) {
+//     if (year % 400 == 0) {
+//         console.log(`${year} year is a leap year !`)
+//     } else {
+//         console.log(`${year} year is not a leap year !`)
+//     }
+// } else if (year % 4 == 0) {
+//     console.log(`${year} year is a leap year !`)
+// } else {
+//     console.log(`${year} year is not a leap year !`)
+// }
+
+// if ((year % 400 == 0) || (year % 100 != 0 && year % 4 == 0)) {
+//     console.log(`${year} year is a leap year !`)
+// } else {
+//     console.log(`${year} year is not a leap year !`)
+// }
+
+// let year = 2028
+
+// year % 400 == 0 || (year % 100 != 0 && year % 4 == 0) ? console.log(`${year} year is a leap year !`) : console.log(`${year} year is not a leap year !`)
+
+// && AND , || OR, ! NOT
+
+// let a = 10
+// let b = 11
+// let c = 12
+
+// if ((a > b) && (a > c)) {
+//     console.log("a is greater than b and c !")
+// } else if (b > c) {
+//     console.log("b is greater than a and c")
+// }else{
+//     console.log("c is greater than a and b")
+// }
+
+// p   q  p and&& q
+// t   t     t
+// t   f     f
+// f   t     f
+// f   f     f
+
+// p   q  p or|| q
+// t   t     t
+// t   f     t
+// f   t     t
+// f   f     f
+
+
+// let input = ""
+
+// !f -> t
+// !t -> f
+
+// if(!input){
+//     console.log('input is empty')
+// }
 
 // looping statements
 
+// let input = 'b'
+
+// if(input == 'a'|| input == 'e' || input == 'i' || input == "e" || input == "o" || input == 'u'){
+//     console.log(`entred ${input} input is a vowel !`)
+// }else{
+//     console.log(`entred ${input} input is not a vowel !`)
+// }
+
 // 1. while. 2. do while, 3. for, 4. for each, 5. for of, 6. for in 
+
+// while loop
+
+// while(condition){
+// statements
+// updations
+// }
+
+// let count = 1
+
+// while (count <= 1000) {
+//     console.log(count)
+//     count++
+// }
+
+// let stop = false
+
+// let year = 2024
+// while (!stop) {
+//     ++year
+//     year % 400 == 0 || (year % 100 != 0 && year % 4 == 0) ? stop = true : stop = false
+// }
+
+// console.log(`next leap year is ${year} year !`)
+
+// while(condition){
+// statements
+// updation
+// }
+
+// let day = 300 
+
+// while(day != 0) {
+//     console.log(`working day ${day}!`)
+//     day--
+// }
+
+
+// 2 * 2 = 4
+// 2 * 3 = 6
+
+// let number = 9
+
+// let count = 0
+
+// while(count <= 12){
+//     console.log(`${number} * ${count} = ${number * count}`)
+//     count++
+// }
+
+// factorials
+// 5! = 120 = 5 * 4 * 3 * 2 * 1 = 120
+
+// let number = 9
+
+// let org_number = number
+
+// let fact = 1
+
+// while (number != 0) {
+//     fact = fact * number
+//     number--
+// }
+
+// console.log(`factorial of ${org_number} is ${fact} !`)
+
+// fact = 1 * 5 = 5
+// fact = 5 * 4 = 20
+// fact = 20 * 3 = 60
+// fact = 60 * 2 = 120
+// fact = 120 * 1 = 120
+
+
+// reverse a number
+
+// let number = 892 // 4321
+
+// let org_number = number
+
+// // rev = rev * 10 + d
+
+// let rev = 0
+
+// let d = 0
+
+// // rev = 0 * 10 + 4 = 4
+// // num 1234 / 10 = 123.4
+// // number -> INT 123
+// // rev = 4 * 10 + 3 = 43
+// // rev = 43 * 10 + 2 = 432
+// // rev = 432 * 10 + 1 = 4321
+
+// while (number != 0) {
+//     d = number % 10
+//     rev = rev * 10 + d
+//     number = parseInt(number / 10)
+// }
+
+
+// console.log(`the reverse of ${org_number} is ${rev} !`)
+
+// armstrong number
+
+// 121 = 1*1*1 + 2*2*2 + 1*1*1 = 1 + 8 + 1 = 10
+// 153 = 1*1*1 + 5*5*5 + 3*3*3 = 1 + 125 + 27 = 153
+
+// let number = 123
+// let org_number = number
+// let d = 0
+
+// let sum = 0
+
+// while (number != 0) {
+//     d = number % 10
+//     sum = sum + (d * d * d)
+//     number = parseInt(number / 10)
+// }
+
+// if (org_number == sum) {
+//     console.log(`number ${org_number} is an armstrong number !`)
+// }else{
+//     console.log(`number ${org_number} is not an armstrong number !`)
+// }
+
+// nasted loop
+
+// while(condition a){
+//     while(condition b){
+//         // statements 
+//         // updations
+//     }
+// }
+
+
+// let number = 154
+// let org_number = number
+// let d = 0
+// let count = number
+// let stop = false
+// let sum = 0
+
+// while (!stop) {
+//     number = count
+//     sum = 0
+//     while (number != 0) {
+//         d = number % 10
+//         sum = sum + (d * d * d)
+//         number = parseInt(number / 10)
+//     }
+//     if (count == sum) {
+//         if (count == org_number) {
+//             console.log(`number ${count} is an armstrong number !`)
+//         } else {
+//             console.log(`number ${org_number} is not an armstrong number !`)
+//             console.log(`Next armstrong number is ${count} !`)
+//         }
+//         stop = true
+//     }
+//     count++
+// }
+
+// do_while
+
+// do{
+//     // statements
+//     // updation
+// }while(condition);
+
+// let value = 10;
+
+// do{
+//     console.log(value)
+//     value++
+// }while(value < 10)
+
+// do you wish to continue
+
+// let choice = false
+
+// do {
+//     let number = Number(window.prompt("Enter a number !"))
+//     let org_number = number
+//     let d = 0
+//     let count = number
+//     let stop = false
+//     let sum = 0
+
+//     while (!stop) {
+//         number = count
+//         sum = 0
+//         while (number != 0) {
+//             d = number % 10
+//             sum = sum + (d * d * d)
+//             number = parseInt(number / 10)
+//         }
+//         if (count == sum) {
+//             if (count == org_number) {
+//                 console.log(`number ${count} is an armstrong number !`)
+//             } else {
+//                 console.log(`number ${org_number} is not an armstrong number !`)
+//                 console.log(`Next armstrong number is ${count} !`)
+//             }
+//             stop = true
+//         }
+//         count++
+//     }
+//     choice = window.confirm("do you wish to continue !")
+// } while (choice)
+
+// console.log("program completed !")
+
+// for(initial; condition; updation){
+// statements
+// }
+
+// for(let i = 0 ; i <= 100 ; i++){
+//     if(i % 3 == 0) {
+//         console.log(i)
+//     }
+// }
+
+// STRING Manipulation
+
+let str1 = "Hello"
+
+// // properties & methods
+
+// // string.length [property]
+
+// console.log(name.length)
+
+// console.log("hello " +name)
+
+// let newString = "hello"  + name
+
+// console.log(newString)
+
+// console.log(name.length)
+
+// console.log(name[0])
+// console.log(name[1])
+// console.log(name[2])
+// console.log(name[3])
+// console.log(name[4])
+// console.log(name[5])
+
+// console.log(str1)
+// console.log(str1.toUpperCase())
+// console.log(str1.toLowerCase())
+// console.log(str1)
+
+// let input = " amey khondekar "
+// console.log(input) // 6
+// input = input.trim() // removes leading and trailing spaces from string
+// console.log(input) // 4
+
+// charAt(index) //returns char
+// indexOf("char") //returns index first occurence
+
+let str2 = "hello world !"
+
+// console.log(str2.charAt(0))
+// console.log(str2.charAt(1))
+// console.log(str2.charAt(2))
+// console.log(str2.charAt(3))
+// console.log(str2.charAt(4))
+// console.log(str2.charAt(5))
+// console.log(str2.charAt(6))
+
+// console.log(str2.indexOf("hello"))
+// console.log(str2.lastIndexOf("hello"))
+
+// h - H
+
+// str2 = str2.replaceAll("e","E")
+
+// console.log(str2)
+
+// String()
+// toString()
+
+// str2.
+
+// slice(start index, end index)
+
+// 0 - 10
+
+// let x = str2.slice(0, 5)
+
+// let y = str2.slice(5, str2.length - 1)
+
+// console.log(x)
+// console.log(y)
+// console.log(str2)
+
+// console.log(str2.substring(0,5))
+
+// console.log(str2)
+
+// str2.match()
+
+// let str3 = "hello i"
+
+// console.log(str3.match("hi"))
+// // if exists then returns index else null
+
+// console.log(str3.includes("hi"))
+
+// // if exists then returns true else false
+
+// // regex is a pattern
+
+// // test
+
+// let name = "amey khondekar"
+
+// console.log(name.split(""))
+// // returns an array of elements
+
+// object
+
+// let student = {
+
+// }
+
+// {
+//     key: value,
+//     key1: value1,
+//     key2: value2
+// }
+
+// let student_name = "amey"
+// let student_phone = "9766696550"
+// let student_address = "nagpur"
+
+// let student = {
+//     name: "amey khondekar",
+//     phone: 9766696550,
+//     address: "nagpur",
+//     regular: true,
+//     subject: ["eng", "sci", "math", "sports"]
+// }
+
+// let student2 = {
+//     name: "Rahuk Kumar",
+//     phone: 8237895726,
+//     address: "nagpur",
+//     regular: true,
+//     subject: ["eng", "sci", "math", "sports"],
+// }
+
+
+// // console.log(student.name)
+// // console.log(student.phone)
+// // console.log(student.address)
+// // console.log(student.regular)
+// // console.log(student.subject)
+
+// // console.log(student2.name)
+// // console.log(student2.phone)
+// // console.log(student2.address)
+// // console.log(student2.regular)
+// // console.log(student2.subject)
+
+// // for in
+
+// for (let key in student) {
+//     // console.log(key)
+//     // console.log(student[key])
+
+//     console.log(`${key} is key and value is ${student[key]}`)
+
+// }ledger_entries
+
+// Array
+
+// collection of elements
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] //55
+// 0  1  2  3  4  5  6  7  8  9
+
+let anything = [100, "hello", NaN, undefined, true, false, { key: "somthing" }]
+
+// console.log(numbers.length)
+// console.log(anything.length)
+
+// console.log(numbers[1])
+// console.log(anything[1])
+
+// anything[0] = "something"
+
+// console.log(anything[0])
+
+// let sum = 0
+
+// for (let i = 0; i < numbers.length; i++) {
+//     // console.log(numbers[i])
+//     sum += numbers[i]
+// }
+
+// console.log(sum)
+
+let student = {
+    name: "amey khondekar",
+    roll: 1,
+    marks: [50, 50, 50, 35, 47],
+    grade: null
+}
+
+let obtainedMarks = 0
+
+for (let i = 0; i < student.marks.length; i++) {
+    obtainedMarks += student.marks[i]
+}
+
+let totalMarks = 250 // 2.5
+
+let factor = totalMarks / 100
+
+let percentages = obtainedMarks / factor
+
+student.percentages = percentages
+
+if (percentages < 50) {
+    student.grade = "C"
+} else if (percentages > 50 && percentages < 80) {
+    student.grade = "B"
+} else if (percentages > 80) {
+    student.grade = "A"
+} else {
+    student.grade = "Z"
+}
+
+console.log(student)
+
+// functions
