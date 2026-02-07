@@ -749,37 +749,129 @@ let anything = [100, "hello", NaN, undefined, true, false, { key: "somthing" }]
 
 // console.log(sum)
 
-let student = {
-    name: "amey khondekar",
-    roll: 1,
-    marks: [50, 50, 50, 35, 47],
-    grade: null
-}
+// let student = {
+//     name: "amey khondekar",
+//     roll: 1,
+//     marks: [50, 50, 50, 35, 47],
+//     grade: null
+// }
 
-let obtainedMarks = 0
+// let obtainedMarks = 0
 
-for (let i = 0; i < student.marks.length; i++) {
-    obtainedMarks += student.marks[i]
-}
+// for (let i = 0; i < student.marks.length; i++) {
+//     obtainedMarks += student.marks[i]
+// }
 
-let totalMarks = 250 // 2.5
+// let totalMarks = 250 // 2.5
 
-let factor = totalMarks / 100
+// let factor = totalMarks / 100
 
-let percentages = obtainedMarks / factor
+// let percentages = obtainedMarks / factor
 
-student.percentages = percentages
+// student.percentages = percentages
 
-if (percentages < 50) {
-    student.grade = "C"
-} else if (percentages > 50 && percentages < 80) {
-    student.grade = "B"
-} else if (percentages > 80) {
-    student.grade = "A"
-} else {
-    student.grade = "Z"
-}
+// if (percentages < 50) {
+//     student.grade = "C"
+// } else if (percentages > 50 && percentages < 80) {
+//     student.grade = "B"
+// } else if (percentages > 80) {
+//     student.grade = "A"
+// } else {
+//     student.grade = "Z"
+// }
 
-console.log(student)
+// console.log(student)
 
 // functions
+
+// ES6
+
+// function keyword
+
+// function doSomething() {
+//     // function body
+// }
+
+// function doSomething() {
+//     console.log("doing something ! 1")
+//     console.log("doing something ! 2")
+//     console.log("doing something ! 3")
+//     console.log("doing something ! 4")
+// }
+
+// arrow function
+
+// const doSomething = () => {
+//     console.log("this is arrow function !")
+// }
+
+// to call a function
+
+// doSomething()
+// doSomething()
+// doSomething()
+// doSomething()
+// doSomething()
+// doSomething()
+// doSomething()
+// doSomething()
+// doSomething()
+// doSomething()
+
+// types of function/method
+
+// 1.No Args(input) and No Return
+// const doSomething = () => {
+//     console.log("this is arrow function !")
+// }
+// 2. Args(input) but No Return
+// const add = (num1, num2) => {
+//     console.log(num1 + num2)
+// }
+
+// const greet = (name) => {
+//     console.log(`hello ! ${name} how are you.`)
+// }
+
+// add(100, 120)
+// greet("amey")
+// greet("sahil")
+// greet("ravi")
+// greet("rahul")
+// // 3. Args(input) and return
+// // return statement means function completed
+
+// const add = (num1,num2) => {
+//     let sum = num1 + num2
+//     return sum
+//     console.log("hello")
+// }
+
+// console.log(add(10,20))
+
+// let c = add(10,90)
+
+// console.log("value of c is ", c)
+
+// console.log(`addition result is ${add(80,15)}`)
+// 4. No args but return 
+// const doSomething = () => {
+//     return "hello"
+// }
+// console.log(doSomething())
+
+// arrow function are hoisted
+
+// doSomething()
+
+doSomething2()
+
+const doSomething = () => {
+    console.log("hello doing something !")
+}
+
+function doSomething2(){
+    console.log("hello doing something ! 2")
+}
+
+doSomething2()
