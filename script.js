@@ -725,10 +725,10 @@ let str2 = "hello world !"
 
 // collection of elements
 
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] //55
-// 0  1  2  3  4  5  6  7  8  9
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] //55
+// // 0  1  2  3  4  5  6  7  8  9
 
-let anything = [100, "hello", NaN, undefined, true, false, { key: "somthing" }]
+// let anything = [100, "hello", NaN, undefined, true, false, { key: "somthing" }]
 
 // console.log(numbers.length)
 // console.log(anything.length)
@@ -864,14 +864,84 @@ let anything = [100, "hello", NaN, undefined, true, false, { key: "somthing" }]
 
 // doSomething()
 
-doSomething2()
+// doSomething2()
 
-const doSomething = () => {
-    console.log("hello doing something !")
-}
+// const doSomething = () => {
+//     console.log("hello doing something !")
+// }
 
-function doSomething2(){
-    console.log("hello doing something ! 2")
-}
+// function doSomething2(){
+//     console.log("hello doing something ! 2")
+// }
 
-doSomething2()
+// doSomething2()
+
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// function squareNumber(number) {
+//     return number * number
+// }
+
+// // console.log(squareNumber(8))
+
+// for (let i = 0; i < numbers.length; i++) {
+//     console.log(squareNumber(numbers[i]))
+// }
+
+// add / remove an element from array
+
+// leading/trailing
+
+// numbers.push(11) // to add an element from trailing side
+// numbers.push(12)
+// numbers.push(13)
+// numbers.push("hello")
+
+// numbers.unshift(14) // to add an element from leading side
+// numbers.unshift(15)
+// numbers.unshift(16)
+// numbers.unshift("amey")
+
+// console.log(numbers)
+
+// numbers.pop() // to remove an element from trailing side
+// numbers.pop()
+// numbers.pop()
+// numbers.pop()
+
+// numbers.shift() // to remove an element from leading side
+// numbers.shift()
+// numbers.shift()
+// numbers.shift()
+
+// console.log(numbers)
+
+// numbers.splice(index, deletcount, replacement(optional))
+
+// numbers.splice(5, 2, 90)
+
+// console.log(numbers)
+
+// slice(startIndex, endIndex)
+
+// let new_numbers = numbers.slice(0,5)
+
+// console.log(new_numbers)
+
+// numbers.
+
+let numbers = [2, 4, 6, 8, 10]
+
+// forEach, map, filter, sort, every, some
+
+// numbers.forEach((number,index)=>{
+//     console.log(number*number)
+//     console.log(index)
+// }) // cannot return anything
+
+let result = numbers.every((number) => {
+    return number % 2 == 0
+})
+// returns boolean
+
+console.log(result)
