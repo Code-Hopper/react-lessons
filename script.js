@@ -930,7 +930,7 @@ let str2 = "hello world !"
 
 // numbers.
 
-let numbers = [2, 4, 6, 8, 10]
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 // forEach, map, filter, sort, every, some
 
@@ -939,9 +939,48 @@ let numbers = [2, 4, 6, 8, 10]
 //     console.log(index)
 // }) // cannot return anything
 
-let result = numbers.every((number) => {
-    return number % 2 == 0
-})
-// returns boolean
+// let result = numbers.every((number) => {
+//     return number % 2 == 0
+// })
+// // returns boolean
 
-console.log(result)
+// console.log(result)
+
+// let new_numbers = numbers.filter((number) => {
+//     return (number % 2 != 0) && (number % 5 != 0)
+// })
+
+// console.log(new_numbers)
+
+// returns an new array of elements
+
+// let reuslt = numbers.map((number, index)=>{
+//     console.log(`${number} at ${index}`)
+//     return number
+// })
+
+// console.log(reuslt)
+
+// to return 
+
+// DOM - Document Object Model
+
+// hmtl elements target
+
+// // Tagname
+// document.getElementsByTagName()
+// // []
+// // classname
+// document.getElementsByClassName()
+// // []
+// // id
+// document.getElementById()
+// // query
+// document.querySelector()
+// document.querySelectorAll()
+
+console.log(document)
+
+let elements = document.getElementsByTagName("h1")
+
+console.log(elements)
