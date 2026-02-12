@@ -979,8 +979,57 @@ let str2 = "hello world !"
 // document.querySelector()
 // document.querySelectorAll()
 
-console.log(document)
+// console.log(document)
 
-let elements = document.getElementsByTagName("h1")
+// let elements = document.getElementsByTagName("h1")
 
-console.log(elements)
+// HTMLCollection
+
+// console.log(elements)
+
+// let input_number = 122
+
+// function checkPalindrome(number) {
+//     let org_number = number;
+//     let d = 0;
+//     let rev = 0;
+//     while (number != 0) { 
+//         d = number % 10;
+//         rev = rev * 10 + d;
+//         number = parseInt(number/10);
+//     }
+//     if(org_number == rev){
+//         return true
+//     }else{
+//         return false
+//     }
+// }
+
+// if(checkPalindrome(input_number)){
+//     console.log(input_number * input_number) //square
+// }else{
+//     console.log(input_number * input_number * input_number) // cube
+// }
+
+// let elements = document.getElementsByTagName("h1")
+// // console.log(elements[0])
+// // console.log(elements[1])
+// // console.log(elements[2])
+
+// let elements2 = document.getElementsByClassName("first")
+// console.log(elements2[0])
+
+// for(let i =0 ; i< elements2.length; i++){
+//     elements2[i].style.color = "red"
+// }
+
+// let element3 = document.getElementById("ele1")
+// console.log(element3)
+// element3.style.color = "yellow"
+// element3.style.background = "black"
+
+// #id, .class , * , .element > .element, .element + .element
+
+let element4 = document.querySelector("li:nth-child(2)")
+console.log(element4)
+element4.style.color = "red"
