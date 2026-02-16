@@ -1030,6 +1030,73 @@ let str2 = "hello world !"
 
 // #id, .class , * , .element > .element, .element + .element
 
-let element4 = document.querySelector("li:nth-child(2)")
-console.log(element4)
-element4.style.color = "red"
+// let element4 = document.querthis is some page 1ySelector("li:nth-child(2)")
+// console.log(element4)
+// element4.style.color = "red"
+
+let element = document.getElementById("ele1")
+
+console.log(element.innerHTML)
+
+// element.innerText = "<u>anything !</u>"
+element.innerHTML = element.innerHTML + " <u>anything !</u>"
+
+console.log(element.innerText)
+
+let colorInput = document.getElementById('ci1')
+
+console.log(colorInput.value)
+
+let element2 = document.getElementById("ele2")
+
+element2.innerHTML = "<h1>this is some heading in ele2</h1> <ul><li>item 1</li><li>item 2</li></ul>"
+
+colorInput.addEventListener("change", (e) => {
+    element2.style.color = `${e.target.value}`
+})
+
+let numberInput = document.getElementById("ni1")
+
+let angle = 0
+
+numberInput.addEventListener('change', (e) => {
+    element2.style.background = `linear-gradient(${e.target.value}deg,rgba(0,255,0),rgba(255,0,0))`
+})
+
+// event in js
+
+// mouse event
+// keyboard event
+// form event
+// window/document event
+
+element2.onmouseenter = (e) => {
+    console.log("mouse entered !")
+}
+
+element2.onmouseleave = (e) => {
+    console.log("mouse left !")
+}
+
+let shiftHold = false
+let clicked = false
+
+element2.onclick = (event) => {
+    console.log(event)
+    shiftHold = event.shiftKey
+    clicked = true
+    console.log('clicked')
+    doSomething()
+}
+
+element2.ondblclick = (e) => {
+    console.log('double clicked')
+}
+
+console.log(shiftHold, clicked)
+
+function doSomething() {
+    if (shiftHold && clicked) {
+        alert("true")
+    }
+}
