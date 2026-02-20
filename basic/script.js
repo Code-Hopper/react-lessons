@@ -1106,54 +1106,54 @@
 //     // event.target -> is the element on which event has been occured !
 // })
 
-let inputs = document.querySelectorAll("#form1 > input")
+// let inputs = document.querySelectorAll("#form1 > input")
 
-let submitButton = document.querySelector("#form1 > button")
+// let submitButton = document.querySelector("#form1 > button")
 
-let table = document.querySelector("#table")
+// let table = document.querySelector("#table")
 
-let person = {
-    name: "",
-    phone: "",
-    email: ""
-}
+// let person = {
+//     name: "",
+//     phone: "",
+//     email: ""
+// }
 
-let personsList = []
+// let personsList = []
 
-console.log(inputs)
+// console.log(inputs)
 
-for (let input of inputs) {
-    input.addEventListener("change", onChange)
-}
+// for (let input of inputs) {
+//     input.addEventListener("change", onChange)
+// }
 
-function onChange(event) {
-    console.log(event.target.name + " : " + event.target.value)
-    person[event.target.name] = event.target.value
-}
+// function onChange(event) {
+//     console.log(event.target.name + " : " + event.target.value)
+//     person[event.target.name] = event.target.value
+// }
 
-submitButton.addEventListener("click", (event) => {
-    console.log("person data submited is : ")
-    console.log(person)
-    personsList.push({...person})
-    console.log(personsList)
-    renderTable()
-})
+// submitButton.addEventListener("click", (event) => {
+//     console.log("person data submited is : ")
+//     console.log(person)
+//     personsList.push({...person})
+//     console.log(personsList)
+//     renderTable()
+// })
 
 
-function renderTable() {
+// function renderTable() {
 
-    let tableBody = document.querySelector("#table > tbody")
+//     let tableBody = document.querySelector("#table > tbody")
 
-    tableBody.innerHTML = ""
+//     tableBody.innerHTML = ""
 
-    for (let personFromList of personsList) {
-        tableBody.innerHTML +=
-            `
-        <tr>
-            <td>${personFromList.name}</td>
-            <td>${personFromList.phone}</td>
-            <td>${personFromList.email}</td>
-        </tr>
-        `
-    }
-}
+//     for (let personFromList of personsList) {
+//         tableBody.innerHTML +=
+//             `
+//         <tr>
+//             <td>${personFromList.name}</td>
+//             <td>${personFromList.phone}</td>
+//             <td>${personFromList.email}</td>
+//         </tr>
+//         `
+//     }
+// }
