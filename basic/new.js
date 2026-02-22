@@ -97,15 +97,42 @@ function renderTable() {
 
     tbody.innerHTML = ""
 
-    for (let entry of entries) {
+    for (let entry = 0; entry < entries.length; entry++) {
         tbody.innerHTML += `
         <tr>
-            <td>${entry.name}</td>
-            <td>${entry.email}</td>
-            <td>${entry.contact}</td>
-            <td>${entry.dob}</td>
-            <td><button>delete</button></td>
+            <td>${entries[entry].name}</td>
+            <td>${entries[entry].email}</td>
+            <td>${entries[entry].contact}</td>
+            <td>${entries[entry].dob}</td>
+            <td>
+                <button onclick="deleteRow(${entry},entries)">
+                    delete
+                </button>
+            </td>
         </tr>
         `
     }
 }
+
+function deleteRow(index, tableArray) {
+    if (tableArray.length != 0) {
+        tableArray.splice(index, 1,)
+        renderTable()
+    } else {
+        alert("empty table !")
+    }
+}
+
+// create, append, delete a child in DOM
+
+let heading = document.createElement("h1")
+
+heading.innerHTML = "<u>hello world</u>"
+
+document.querySelector("div").appendChild(heading)
+
+document.querySelector("div").removeChild(heading)
+
+console.log(document.querySelector("div:nth-child(2)"))
+
+document.querySelector('body > section').removeChild(document.querySelector("div:nth-child(2)"))
