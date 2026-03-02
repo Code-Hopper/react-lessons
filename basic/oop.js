@@ -47,6 +47,7 @@ class animal {
     canRun;
     canWalk;
     isSleeping = false;
+    deleted = false
 
     constructor(name, type, legs, wings, canFly, canSwim, canRun) {
         this.name = name
@@ -124,3 +125,5 @@ dog.run()
 // built in class
 
 // math / date
+
+let animals = [dog,]
