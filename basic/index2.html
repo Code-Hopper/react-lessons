@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #pop {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            background-color: rgba(0, 0, 0, .5);
+            left: 0;
+            top: 0;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pop-container{
+            width: 500px;
+            height: 500px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <h1 id="time"></h1>
+    <button onclick="action()">click</button>
+
+    <div id="pop" class="hide">
+        <div class="pop-container ">
+            <h1>Hello</h1>
+        </div>
+    </div>
+
+</body>
+<script src="./async.js"></script>
+
+</html>
