@@ -1,0 +1,35 @@
+React.js is a javascript based libary created by meta to create UIs,
+
+SPA: Single Page Application
+
+React Components ->  Vanilla javascript (Bable) -> Injected into a HTML DOM by ReactDOM -> Render the website/application
+
+ReactDOM -> create a VDOM (Virtual DOM)
+
+HTML
+|
+|
+|_Head
+|
+|
+|_Body
+    |
+    |_div#root
+            |
+            |
+            |_VDOM
+
+React App
+
+1. REACT CRA (Create React App)
+2. VITE REACT
+
+JSON
+
+GUI, CLI
+
+JSON JavaScript Object Notation (is used mainly by APIs)
+
+package.json is a summary page for node apps
+
+npm (node pacakge manger) | npx (node package extension)
