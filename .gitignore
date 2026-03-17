@@ -1,0 +1,6 @@
+# Ignore node_modules directories anywhere
+node_modules/
+
+# Ignore package lock files anywhere (including a possible "pack-lock.json" typo)
+package-lock.json
+pack-lock.json
