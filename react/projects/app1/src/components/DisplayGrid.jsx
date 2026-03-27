@@ -32,29 +32,32 @@ let data = [
   { emoji: "🧠", name: "Brain", description: "organ controlling body functions" }
 ];
 
+const DisplayEmojiCard = (props) => {
+  return (
+    <div key={props.index} className='emoji-item p-5 shadow border border-gray-300 inline-flex gap-3 items-center rounded-lg'>
+      <div>
+        <span className='text-3xl'>
+          {props.item.emoji}
+        </span>
+      </div>
+      <div className='flex flex-col gap-1 '>
+        <span className='font-bold text-xs'>
+          {props.item.name}
+        </span>
+        <span className='text-[.75rem]'>
+          {props.item.description}
+        </span>
+      </div>
+    </div>
+  )
+}
+
 const DisplayGrid = () => {
+
   return (
     <div className='p-5 grid gap-2 grid-cols-6'>
       {
-        data.map((item, index) => {
-          return (
-            <div key={index} className='emoji-item p-5 shadow border border-gray-300 inline-flex gap-3 items-center rounded-lg'>
-              <div>
-                <span className='text-3xl'>
-                  {item.emoji}
-                </span>
-              </div>
-              <div className='flex flex-col gap-1 '>
-                <span className='font-bold text-xs'>
-                  {item.name}
-                </span>
-                <span className='text-[.75rem]'>
-                  {item.description}
-                </span>
-              </div>
-            </div>
-          )
-        })
+        data.map(DisplayEmojiCard)
       }
     </div>
   )
