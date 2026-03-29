@@ -1,13 +1,12 @@
 import React from 'react'
+import { useState } from 'react'
 import DisplayGrid from './components/DisplayGrid'
 
 const App = () => {
+
   return (
     <>
       <DisplayGrid />
-      <h1 className='text-red-400'>
-        something
-      </h1>
     </>
   )
 }
