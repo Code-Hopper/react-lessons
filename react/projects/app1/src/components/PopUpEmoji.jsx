@@ -12,3 +12,10 @@ const PopUpEmoji = (props) => {
 }
 
 export default PopUpEmoji
+
+
+// components
+// import and export
+// props objects
+// conditional rendered components 
+// controlled components
